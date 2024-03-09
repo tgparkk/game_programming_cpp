@@ -84,10 +84,11 @@ bool Game::Initialize()
 
 	m_ball_info.push_back(Ball_Info(mBallPos, mBallVel));
 	m_ball_info.push_back(Ball_Info(mBallPos2, mBallVel2));
-	m_ball_info.push_back(Ball_Info(Vector2(300.0f / 2.0f, 768.0f / 2.0f), Vector2(-200.0f, 235.0f)));
+	m_ball_info.push_back(Ball_Info(Vector2(300.0f / 2.0f, 768.0f / 2.0f), Vector2(-100.0f, 235.0f)));
 	m_ball_info.push_back(Ball_Info(Vector2(200.0f / 2.0f, 768.0f / 2.0f), Vector2(-150.0f, 235.0f)));
 	m_ball_info.push_back(Ball_Info(Vector2(200.0f / 2.0f, 768.0f / 2.0f), Vector2(-50.0f, 235.0f)));
-	m_ball_info.push_back(Ball_Info(Vector2(200.0f / 2.0f, 768.0f / 2.0f), Vector2(-750.0f, 235.0f)));
+	m_ball_info.push_back(Ball_Info(Vector2(200.0f / 2.0f, 768.0f / 2.0f), Vector2(-25.0f, 235.0f)));
+	m_ball_info.push_back(Ball_Info(Vector2(200.0f / 2.0f, 768.0f / 2.0f), Vector2(-55.0f, 235.0f)));
 
 	return true;
 }
