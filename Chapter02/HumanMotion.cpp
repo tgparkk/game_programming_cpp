@@ -1,7 +1,7 @@
 #include "HumanMotion.h"
 #include "AnimSpriteComponent.h"
 #include "Game.h"
-
+#include "TileMapComponent.h"
 
 HumanMotion::HumanMotion(Game* game)
 	:Actor(game)
@@ -19,6 +19,8 @@ HumanMotion::HumanMotion(Game* game)
 		game->GetTexture("Assets/Character06.png"),
 	};
 	asc->SetAnimTextures(anims);
+
+	TileMapComponent* tmc = new TileMapComponent(this, 1);
 }
 
 void HumanMotion::UpdateActor(float deltaTime)
