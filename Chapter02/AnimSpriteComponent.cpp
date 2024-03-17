@@ -8,6 +8,8 @@
 
 #include "AnimSpriteComponent.h"
 #include "Math.h"
+#include "HumanMotion.h"
+#include "Ship.h"
 
 AnimSpriteComponent::AnimSpriteComponent(Actor* owner, int drawOrder)
 	:SpriteComponent(owner, drawOrder)
@@ -25,6 +27,16 @@ void AnimSpriteComponent::Update(float deltaTime)
 		// Update the current frame based on frame rate
 		// and delta time
 		mCurrFrame += mAnimFPS * deltaTime;
+
+		if (mDrawOrder == 90)
+		{
+			int tt = 1;
+		}
+
+		if (mAnimTextures.size() <= mCurrFrame && mDrawOrder == 90)
+		{
+			return;
+		}
 		
 		// Wrap current frame if needed
 		while (mCurrFrame >= mAnimTextures.size())
@@ -37,7 +49,7 @@ void AnimSpriteComponent::Update(float deltaTime)
 	}
 }
 
-void AnimSpriteComponent::SetAnimTextures(const std::vector<SDL_Texture*>& textures)
+void AnimSpriteComponent::SetAnimTextures(const std::vector<SDL_Texture*>& textures, int flag)
 {
 	mAnimTextures = textures;
 	if (mAnimTextures.size() > 0)

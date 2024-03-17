@@ -9,6 +9,8 @@
 #include "Component.h"
 #include "Actor.h"
 
+class Actor;
+
 Component::Component(Actor* owner, int updateOrder)
 	:mOwner(owner)
 	,mUpdateOrder(updateOrder)

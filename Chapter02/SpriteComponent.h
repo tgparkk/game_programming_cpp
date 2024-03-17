@@ -9,6 +9,8 @@
 #pragma once
 #include "Component.h"
 #include "SDL/SDL.h"
+#include "Game.h"
+
 class SpriteComponent : public Component
 {
 public:
