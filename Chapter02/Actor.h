@@ -9,6 +9,9 @@
 #pragma once
 #include <vector>
 #include "Math.h"
+
+class Game;
+
 class Actor
 {
 public:

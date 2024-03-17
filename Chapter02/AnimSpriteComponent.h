@@ -16,7 +16,7 @@ public:
 	// Update animation every frame (overridden from component)
 	void Update(float deltaTime) override;
 	// Set the textures used for animation
-	void SetAnimTextures(const std::vector<SDL_Texture*>& textures);
+	void SetAnimTextures(const std::vector<SDL_Texture*>& textures, int flag = 0);
 	// Set/get the animation FPS
 	float GetAnimFPS() const { return mAnimFPS; }
 	void SetAnimFPS(float fps) { mAnimFPS = fps; }

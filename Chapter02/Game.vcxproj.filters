@@ -63,6 +63,8 @@
     <ClInclude Include="BGSpriteComponent.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="HumanMotion.h" />
+    <ClInclude Include="HumanMotion.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -13,12 +13,20 @@
 #include "SpriteComponent.h"
 #include "Ship.h"
 #include "BGSpriteComponent.h"
+#include "HumanMotion.h"
 
 Game::Game()
-:mWindow(nullptr)
+:mTextures()
+,mActors()
+,mPendingActors()
+,mSprites()
+,mWindow(nullptr)
 ,mRenderer(nullptr)
+,mTicksCount(0)
 ,mIsRunning(true)
 ,mUpdatingActors(false)
+,mShip()
+,mHumanMotion()
 {
 	
 }
@@ -89,6 +97,8 @@ void Game::ProcessInput()
 
 	// Process ship input
 	mShip->ProcessKeyboard(state);
+	// Process human input
+	mHumanMotion->ProcessKeyboard(state);
 }
 
 void Game::UpdateGame()
@@ -157,6 +167,11 @@ void Game::LoadData()
 	mShip = new Ship(this);
 	mShip->SetPosition(Vector2(100.0f, 384.0f));
 	mShip->SetScale(1.5f);
+
+	// Create player's human
+	mHumanMotion = new HumanMotion(this);
+	mHumanMotion->SetPosition(Vector2(100.0f, 384.0f));
+	mHumanMotion->SetScale(3.5f);
 
 	// Create actor for the background (this doesn't need a subclass)
 	Actor* temp = new Actor(this);

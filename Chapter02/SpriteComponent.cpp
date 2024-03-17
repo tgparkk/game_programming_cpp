@@ -8,7 +8,7 @@
 
 #include "SpriteComponent.h"
 #include "Actor.h"
-#include "Game.h"
+#include "HumanMotion.h"
 
 SpriteComponent::SpriteComponent(Actor* owner, int drawOrder)
 	:Component(owner)

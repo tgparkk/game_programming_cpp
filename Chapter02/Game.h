@@ -54,4 +54,7 @@ private:
 
 	// Game-specific
 	class Ship* mShip; // Player's ship
+
+	// Game-specific-human
+	class HumanMotion* mHumanMotion; // Player's Human
 };
